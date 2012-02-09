@@ -42,11 +42,9 @@ fi
 
 unset append
 
-if ! type -p vim > /dev/null; then
-  export EDITOR=vim
-fi
+export EDITOR=vim
 
-if [ `uname` eq 'Darwin' ]; then
+if [ `uname` == 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home`
 fi
 
