@@ -9,3 +9,5 @@ alias s="ls"
 
 alias rm="rm -i"
 
+alias c="clear"
+
