@@ -9,6 +9,7 @@
 export TERM="xterm-color"
 
 PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] "
+PS1="\[\033[0m\]\u@\[\033[0;33m\]\h\[\033[0m\]: \W \$ "
 
 append () {
   # First remove the directory
