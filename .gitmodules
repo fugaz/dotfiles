@@ -1,0 +1,3 @@
+[submodule "modules/scala-dist"]
+	path = modules/scala-dist
+	url = https://github.com/scala/scala-dist.git
