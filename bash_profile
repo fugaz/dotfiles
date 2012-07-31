@@ -41,6 +41,11 @@ if [ -d "/usr/lib/gradle/bin" ] ; then
   append /usr/lib/gradle/bin
 fi
 
+if [ -d "Library/Frameworks/R.framework/" ] ; then
+  append /Library/Frameworks/R.framework/
+  export R_HOME=/Library/Frameworks/R.framework/Resources/
+fi
+
 unset append
 
 export EDITOR=vim
