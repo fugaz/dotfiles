@@ -54,5 +54,13 @@ if [ `uname` == 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home`
 fi
 
+if [ -d "$HOME/bin/ec2-api-tools" ] ; then
+  export EC2_HOME=$HOME/bin/ec2-api-tools/
+fi
+
+if [ -d "$HOME/bin/iamcli" ] ; then
+  export AWS_IAM_HOME=$HOME/bin/iamcli/
+fi
+
 # End ~/.bash_profile
 
