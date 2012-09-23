@@ -46,6 +46,15 @@ if [ -d "Library/Frameworks/R.framework/" ] ; then
   export R_HOME=/Library/Frameworks/R.framework/Resources/
 fi
 
+if [ -d "/usr/local/cloudbees" ] ; then
+  append /usr/local/cloudbees
+  export BEES_HOME=/usr/local/cloudbees
+fi
+
+if [ -d "/Applications/rapidminer" ] ; then
+export RAPIDMINER_HOME=/Applications/rapidminer
+fi
+
 unset append
 
 export EDITOR=vim

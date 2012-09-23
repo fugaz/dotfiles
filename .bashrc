@@ -11,5 +11,3 @@ alias rm="rm -i"
 
 alias c="clear"
 
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
