@@ -51,6 +51,11 @@ if [ -d "/usr/local/cloudbees" ] ; then
   export BEES_HOME=/usr/local/cloudbees
 fi
 
+if [ -d "$HOME/springsource/grails-2.1.1" ] ; then
+  append $HOME/springsource/grails-2.1.1
+  export GRAILS_HOME=$HOME/springsource/grails-2.1.1
+fi
+
 if [ -d "/Applications/rapidminer" ] ; then
 export RAPIDMINER_HOME=/Applications/rapidminer
 fi
