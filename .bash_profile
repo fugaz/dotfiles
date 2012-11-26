@@ -72,6 +72,10 @@ if [ -d "$HOME/bin/ec2-api-tools" ] ; then
   export EC2_HOME=$HOME/bin/ec2-api-tools/
 fi
 
+if [ -d "$HOME/.aws/" ] ; then
+  export AWS_CREDENTIAL_FILE=$HOME/.aws/aws_credential-file
+fi
+
 if [ -d "$HOME/bin/iamcli" ] ; then
   export AWS_IAM_HOME=$HOME/bin/iamcli/
 fi
