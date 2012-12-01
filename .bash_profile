@@ -52,7 +52,7 @@ if [ -d "/usr/local/cloudbees" ] ; then
 fi
 
 if [ -d "/Applications/rapidminer" ] ; then
-export RAPIDMINER_HOME=/Applications/rapidminer
+  export RAPIDMINER_HOME=/Applications/rapidminer
 fi
 
 unset append
