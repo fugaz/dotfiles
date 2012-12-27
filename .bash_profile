@@ -46,9 +46,9 @@ if [ -d "/Library/Frameworks/R.framework/" ] ; then
   export R_HOME=/Library/Frameworks/R.framework/
 fi
 
-if [ -d "/usr/local/cloudbees" ] ; then
-  append /usr/local/cloudbees
-  export BEES_HOME=/usr/local/cloudbees
+if [ -d "$HOME/bin/cloudbees" ] ; then
+  append $HOME/bin/cloudbees
+  export BEES_HOME=$HOME/bin/cloudbees
 fi
 
 if [ -d "$HOME/springsource/grails-2.1.1" ] ; then
