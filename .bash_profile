@@ -11,56 +11,44 @@ export TERM="xterm-color"
 PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] "
 PS1="\[\033[0m\]\u@\[\033[0;33m\]\h\[\033[0m\]: \W \$ "
 
-append () {
-  # First remove the directory
-  local IFS=':'
-  local NEWPATH
-  for DIR in $PATH; do
-     if [ "$DIR" != "$1" ]; then
-       NEWPATH=${NEWPATH:+$NEWPATH:}$DIR
-     fi
-  done
-
-  # Then append the directory
-  export PATH=$NEWPATH:$1
-}
+PATH="/usr/local/bin:/bin:/sbin:/usr/sbin:/usr/bin:/usr/local/sbin:~/bin:$PATH"
 
 if [ -f "$HOME/.bashrc" ] ; then
   source $HOME/.bashrc
 fi
 
 if [ -d "$HOME/bin" ] ; then
-  append $HOME/bin
+  PATH=$PATH:"~/bin"
 fi
 
 if [ -d "/usr/lib/roo/bin" ] ; then
-  append /usr/lib/roo/bin
+  PATH=$PATH:"/usr/lib/roo/bin"
 fi
 
 if [ -d "/usr/lib/gradle/bin" ] ; then
-  append /usr/lib/gradle/bin
+  PATH=$PATH:"/usr/lib/gradle/bin"
 fi
 
 if [ -d "/Library/Frameworks/R.framework/" ] ; then
-  append /Library/Frameworks/R.framework/
-  export R_HOME=/Library/Frameworks/R.framework/
+  export R_HOME="/Library/Frameworks/R.framework"
+  PATH=$PATH:$R_HOME
 fi
 
 if [ -d "$HOME/bin/cloudbees" ] ; then
-  append $HOME/bin/cloudbees
-  export BEES_HOME=$HOME/bin/cloudbees
+  export BEES_HOME="~/bin/cloudbees"
+  PATH=$PATH:$BEES_HOME
 fi
 
-if [ -d "$HOME/springsource/grails-2.1.1" ] ; then
-  append $HOME/springsource/grails-2.1.1
-  export GRAILS_HOME=$HOME/springsource/grails-2.1.1
+if [ -d "$HOME/springsource/grails" ] ; then
+  export GRAILS_HOME="~/springsource/grails"
+  PATH=$PATH:$GRAILS_HOME/bin
 fi
 
 if [ -d "/Applications/rapidminer" ] ; then
-  export RAPIDMINER_HOME=/Applications/rapidminer
+  export RAPIDMINER_HOME="/Applications/rapidminer"
 fi
 
-unset append
+export PATH=$PATH
 
 export EDITOR=vim
 
@@ -81,4 +69,13 @@ if [ -d "$HOME/bin/iamcli" ] ; then
 fi
 
 # End ~/.bash_profile
+
+
+##
+# Your previous /Users/fugaz/.bash_profile file was backed up as /Users/fugaz/.bash_profile.macports-saved_2012-12-02_at_16:07:37
+##
+
+# MacPorts Installer addition on 2012-12-02_at_16:07:37: adding an appropriate PATH variable for use with MacPorts.
+#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
 
