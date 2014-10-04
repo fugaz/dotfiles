@@ -8,7 +8,6 @@
 
 export TERM="xterm-color"
 
-PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] "
 PS1="\[\033[0m\]\u@\[\033[0;33m\]\h\[\033[0m\]: \W \$ "
 
 PATH="/usr/local/bin:/bin:/sbin:/usr/sbin:/usr/bin:/usr/local/sbin:~/bin:$PATH"
@@ -26,24 +25,21 @@ if [ -d "/Library/Frameworks/R.framework/" ] ; then
   PATH=$PATH:$R_HOME
 fi
 
+if [ -d "$HOME/springsource/grails" ] ; then
+  export GRAILS_HOME="~/springsource/grails"
+  PATH=$PATH:$GRAILS_HOME/bin
+fi
+
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 export PATH=$PATH
 
 export EDITOR=vim
 
+export SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
+
 if [ `uname` == 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home`
 fi
 
 # End ~/.bash_profile
-
-
-##
-# Your previous /Users/fugaz/.bash_profile file was backed up as /Users/fugaz/.bash_profile.macports-saved_2012-12-02_at_16:07:37
-##
-
-# MacPorts Installer addition on 2012-12-02_at_16:07:37: adding an appropriate PATH variable for use with MacPorts.
-#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
