@@ -21,27 +21,12 @@ if [ -d "$HOME/bin" ] ; then
   PATH=$PATH:"~/bin"
 fi
 
-if [ -d "/usr/lib/roo/bin" ] ; then
-  PATH=$PATH:"/usr/lib/roo/bin"
-fi
-
-if [ -d "/usr/lib/gradle/bin" ] ; then
-  PATH=$PATH:"/usr/lib/gradle/bin"
-fi
-
 if [ -d "/Library/Frameworks/R.framework/" ] ; then
   export R_HOME="/Library/Frameworks/R.framework"
   PATH=$PATH:$R_HOME
 fi
 
-if [ -d "$HOME/springsource/grails" ] ; then
-  export GRAILS_HOME="~/springsource/grails"
-  PATH=$PATH:$GRAILS_HOME/bin
-fi
-
-if [ -d "/Applications/rapidminer" ] ; then
-  export RAPIDMINER_HOME="/Applications/rapidminer"
-fi
+PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 export PATH=$PATH
 
@@ -49,18 +34,6 @@ export EDITOR=vim
 
 if [ `uname` == 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home`
-fi
-
-if [ -d "$HOME/bin/ec2-api-tools" ] ; then
-  export EC2_HOME=$HOME/bin/ec2-api-tools/
-fi
-
-if [ -d "$HOME/.aws/" ] ; then
-  export AWS_CREDENTIAL_FILE=$HOME/.aws/aws_credential-file
-fi
-
-if [ -d "$HOME/bin/iamcli" ] ; then
-  export AWS_IAM_HOME=$HOME/bin/iamcli/
 fi
 
 # End ~/.bash_profile
