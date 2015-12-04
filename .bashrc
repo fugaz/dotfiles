@@ -11,3 +11,4 @@ alias rm="rm -i"
 
 alias c="clear"
 
+alias cal="cal -m"
