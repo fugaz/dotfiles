@@ -30,6 +30,11 @@ if [ -d "$HOME/springsource/grails" ] ; then
   PATH=$PATH:$GRAILS_HOME/bin
 fi
 
+if [ -d "$HOME/lib/apache-uima" ] ; then
+  export UIMA_HOME="~/lib/apache-uima"
+  PATH=$PATH:$UIMA_HOME/bin
+fi
+
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 export PATH=$PATH
