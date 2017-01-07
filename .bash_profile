@@ -25,9 +25,9 @@ if [ -d "/Library/Frameworks/R.framework/" ] ; then
   PATH=$PATH:$R_HOME
 fi
 
-if [ -d "$HOME/springsource/grails" ] ; then
-  export GRAILS_HOME="~/springsource/grails"
-  PATH=$PATH:$GRAILS_HOME/bin
+if [ -d "$HOME/lib/apache-uima" ] ; then
+  export UIMA_HOME="$HOME/lib/apache-uima"
+  PATH=$PATH:$UIMA_HOME/bin
 fi
 
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
