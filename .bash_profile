@@ -30,6 +30,10 @@ if [ -d "$HOME/lib/apache-uima" ] ; then
   PATH=$PATH:$UIMA_HOME/bin
 fi
 
+if [ -d "/usr/local/anaconda3/" ] ; then
+  PATH=/usr/local/anaconda3/bin:"$PATH"
+fi
+
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 export PATH=$PATH
