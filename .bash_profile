@@ -10,7 +10,7 @@ export TERM="xterm-color"
 
 PS1="\[\033[0m\]\u@\[\033[0;33m\]\h\[\033[0m\]: \W \$ "
 
-PATH="/usr/local/bin:/bin:/sbin:/usr/sbin:/usr/bin:/usr/local/sbin:~/bin:$PATH"
+#PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 if [ -f "$HOME/.bashrc" ] ; then
   source $HOME/.bashrc
@@ -30,13 +30,19 @@ if [ -d "$HOME/lib/apache-uima" ] ; then
   PATH=$PATH:$UIMA_HOME/bin
 fi
 
+if [ -d "/usr/local/opt/python/libexec/bin/" ] ; then
+  PATH=/usr/local/opt/python/libexec/bin:"$PATH"
+fi
+
+if [ -d "$HOME/Library/Python/3.7/bin/" ] ; then
+  PATH=$HOME/Library/Python/3.7/bin:"$PATH"
+fi
+
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 export PATH=$PATH
 
 export EDITOR=vim
-
-export SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
 
 if [ `uname` == 'Darwin' ]; then
   export JAVA_HOME=`/usr/libexec/java_home`
