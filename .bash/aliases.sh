@@ -14,11 +14,12 @@ alias la='ls -A'
 alias l='ls -CF'
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
-alias bt='btlaunchmany.py --torrent_dir /Users/Shared/Torrent/ --display_interval 60 --max_upload_rate 0'
+if ! [ -x "$(command -v newsboat)" ]; then
+  alias nb='newsboat -r'
+fi
 
 # enable directory colors
-eval `dircolors`
-alias ls='ls --color=auto '
+alias ls='ls -G'
 
 # misc
 alias ..="cd .."
