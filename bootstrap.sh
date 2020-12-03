@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 cd "$(dirname "$0")"
 git pull
@@ -15,5 +15,4 @@ else
     fi
 fi
 unset doIt
-source ~/.bash_profile
 
