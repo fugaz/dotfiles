@@ -1,9 +1,5 @@
 #!/bin/bash
 
-cd
-
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 cd "$(dirname "$0")"
 git pull
 function doIt() {
