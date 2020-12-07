@@ -4,6 +4,8 @@ cd "$(dirname "$0")"
 git pull
 function doIt() {
     rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+    mv aliases.sh ~./.bash/
+    cp ~./.bash/aliases.sh ~./oh-my-zsh/custom
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
     doIt
@@ -15,4 +17,3 @@ else
     fi
 fi
 unset doIt
-

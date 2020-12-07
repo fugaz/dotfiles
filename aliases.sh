@@ -1,13 +1,6 @@
-#######################################################################
-# ~/.bash/aliases.sh                                                  #
-# version 0.2.1                                                       #
-# by Paul Duncan <pabs@pablotron.org>                                 #
-#######################################################################
-
 ########################
 # Basic System Aliases #
 ########################
-
 
 alias ll='ls -l'
 alias la='ls -A'
@@ -26,4 +19,3 @@ alias ..="cd .."
 alias c="clear"
 
 alias xmms="xmms -e"
-
