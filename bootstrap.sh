@@ -3,8 +3,8 @@
 cd "$(dirname "$0")"
 git pull
 function copyAliases() {
-  cp aliases.sh ~.bash/aliases.sh
-  cp aliases.sh ~.oh-my-zsh/custom/aliases.zsh
+  cp aliases.sh ~/.bash/aliases.sh
+  cp aliases.sh ~/.oh-my-zsh/custom/aliases.zsh
   rm aliases.sh
 }
 function doIt() {
