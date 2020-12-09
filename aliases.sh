@@ -7,9 +7,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
-if ! [ -x "$(command -v newsboat)" ]; then
-  alias nb='newsboat -r'
-fi
 
 # enable directory colors
 alias ls='ls -G'
@@ -19,3 +16,4 @@ alias ..="cd .."
 alias c="clear"
 
 alias xmms="xmms -e"
+alias nb='newsboat -r'
