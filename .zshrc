@@ -83,6 +83,7 @@ plugins=(
     brew
     dotenv
     jira
+    genpass
 )
 
 source $ZSH/oh-my-zsh.sh
