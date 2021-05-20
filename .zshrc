@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export PATH="/usr/local/sbin:$PATH"
+
 # brew
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -83,6 +85,7 @@ plugins=(
     brew
     dotenv
     jira
+    genpass
 )
 
 source $ZSH/oh-my-zsh.sh
