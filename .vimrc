@@ -80,20 +80,7 @@ elseif has("linux")
   set shell=/bin/bash
 endif
 
-if has("gui_running")
-  set guioptions-=T
-  set background=dark
-  set t_Co=256
-  set background=dark
-  colorscheme peaksea
-
-  set nu
-else
-  colorscheme zellner
-  set background=dark
-  
-  set nonu
-endif
+set background=dark
 
 set encoding=utf8
 try
